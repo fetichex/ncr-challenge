@@ -1,12 +1,12 @@
 ***********************************************************
 **               NCR Challenge Version 1.0               **
 ***********************************************************
-Date: 09/11/2022
-Author: Diego Cano Mera
-Phone: +541159965231
-[linkedin](https://www.linkedin.com/in/diegocano-fullstackdeveloper/)
-[Portfolio](https://portfolio-diego-cano.netlify.app/)
-Email: diegocanomera@gmail.com
+- Date: 09/11/2022
+- Author: Diego Cano Mera
+- Phone: +541159965231
+- [linkedin](https://www.linkedin.com/in/diegocano-fullstackdeveloper/)
+- [Portfolio](https://portfolio-diego-cano.netlify.app/)
+- Email: diegocanomera@gmail.com
 
 ------------------------------------------------------------
 Development Notes:
