@@ -1,9 +1,11 @@
 import AccountContainer from '../components/AccountContainer'
+import AccountInfo from '../components/AccountInfo'
 
 export function filterAccType(t) {
-  if (t.toUpperCase() === 'CA') {
+  const T = t.toUpperCase()
+  if (T === 'CA') {
     return 'Caja de Ahorros'
-  } else if (t.toUpperCase() === 'CC') {
+  } else if (T === 'CC') {
     return 'Cuenta Corriente'
   }
   return
