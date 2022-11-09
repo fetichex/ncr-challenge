@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import { Route } from 'wouter'
 
 import useAccountStore from './store'
-import { ROUTES } from './utils'
+import { ROUTES } from './utils/utils'
 import Layout from './components/Layout'
 import Global from './global.style'
 
