@@ -3,5 +3,5 @@ import AccountInfo from '../components/AccountInfo'
 
 export const ROUTES = [
   { path: '/', component: AccountContainer },
-  { path: '/:id', component: AccountInfo },
+  { path: '/:id', component: AccountInfo }
 ]

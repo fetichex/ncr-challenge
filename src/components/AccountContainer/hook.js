@@ -16,6 +16,6 @@ export default function usePoster() {
 
   return {
     postsPerPage,
-    setPostsPerPage,
+    setPostsPerPage
   }
 }

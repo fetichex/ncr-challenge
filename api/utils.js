@@ -1,6 +1,5 @@
 /* eslint-disable camelcase */
 export async function getAllAccounts() {
-  const getId = () => Math.random().toString(36).replace('0.', '')
   try {
     const response = await fetch(
       'https://api.npoint.io/97d89162575a9d816661'
@@ -8,15 +7,16 @@ export async function getAllAccounts() {
 
     const data = await response.cuentas
       .filter(acc => acc.n !== ' ')
+      .filter(acc => acc.saldo == parseInt(acc.saldo))
       .filter(acc => acc.moneda === '$' || acc.moneda === 'u$s')
       .filter(
         acc =>
           acc.tipo_letras.toUpperCase() === 'CA' ||
           acc.tipo_letras.toUpperCase() === 'CC'
       )
-      .map(acc => {
+      .map((acc, i) => {
         return {
-          id: getId(),
+          id: i,
           e: acc.e,
           n: acc.n,
           t: acc.t,

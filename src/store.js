@@ -1,14 +1,19 @@
 import axios from 'axios'
 import create from 'zustand'
-import { devtools } from 'zustand/middleware'
+import { persist } from 'zustand/middleware'
 
 const useAccountStore = create(
-  devtools((set) => ({
+  persist((set) => ({
     accounts: [],
     accDetail: {},
     setAccs: async (url) => {
       const data = await axios.get(url)
       set({ accounts: data.data })
+    },
+    setDetail: (id) => {
+      set((state) => ({
+        accDetail: state.accounts.find((acc) => acc.id === id)
+      }))
     },
     currentPage: 1,
     setCurrentPage: (n) => {

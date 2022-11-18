@@ -8,7 +8,7 @@ afterEach(() => {
 const customRender = (ui, options = {}) =>
   render(ui, {
     wrapper: ({ children }) => children,
-    ...options,
+    ...options
   })
 
 export * from '@testing-library/react'

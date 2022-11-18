@@ -17,10 +17,6 @@ export default function AccountContainer() {
 
   return (
     <Container>
-      <div className='texts'>
-        <p>Consulta de Saldo</p>
-        <h1>Selecciona la Cuenta a Consultar</h1>
-      </div>
       <ContainerAccounts>
         {currentPage !== 1 ? (
           <Card onClick={() => prevPage()}>Opciones Anteriores</Card>
