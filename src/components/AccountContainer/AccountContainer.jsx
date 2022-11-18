@@ -17,23 +17,12 @@ export default function AccountContainer() {
 
   return (
     <Container>
-      <div className='texts'>
-        <p>Consulta de Saldo</p>
-        <h1>Selecciona la Cuenta a Consultar</h1>
-      </div>
       <ContainerAccounts>
         {currentPage !== 1 ? (
           <Card onClick={() => prevPage()}>Opciones Anteriores</Card>
         ) : null}
-        {currentPosts?.map((acc, i) => {
-          return (
-            <Account
-              key={i}
-              i={i}
-              t={acc.tipo_letras.toUpperCase()}
-              n={acc.n}
-            />
-          )
+        {currentPosts?.map(({ accType, n, saldo, id }) => {
+          return <Account key={id} id={id} t={accType} n={n} s={saldo} />
         })}
         {currentPage >= howManyPages ? null : (
           <Card onClick={() => nextPage()}>Mas opciones</Card>

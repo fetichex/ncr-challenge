@@ -14,15 +14,15 @@
     "eslint-config-prettier",
     "standard"
   ],
+  "overrides": [],
   "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
-    },
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
   "plugins": ["react"],
   "rules": {
-    "space-before-function-paren": "off"
+    "space-before-function-paren": "off",
+    "multiline-ternary": "off",
+    "react/prop-types": "off"
   }
 }
