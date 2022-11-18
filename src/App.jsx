@@ -7,9 +7,9 @@ import Layout from './components/Layout'
 import Global from './global.style'
 
 export default function App() {
-  const getAcc = useAccountStore((state) => state.getAcc)
+  const setAccs = useAccountStore((state) => state.setAccs)
   useEffect(() => {
-    getAcc('http://localhost:3000/')
+    setAccs('http://localhost:3000/')
   }, [])
 
   return (

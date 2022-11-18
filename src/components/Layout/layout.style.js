@@ -36,9 +36,9 @@ export const Header = styled.header`
   height: 6rem;
   background-color: #8cb369;
   grid-area: label0;
-  box-shadow: 0px 10px 23px -14px rgba(0,0,0,0.58);
--webkit-box-shadow: 0px 10px 23px -14px rgba(0,0,0,0.58);
--moz-box-shadow: 0px 10px 23px -14px rgba(0,0,0,0.58);
+  box-shadow: 0px 10px 23px -14px rgba(0, 0, 0, 0.58);
+  -webkit-box-shadow: 0px 10px 23px -14px rgba(0, 0, 0, 0.58);
+  -moz-box-shadow: 0px 10px 23px -14px rgba(0, 0, 0, 0.58);
 
   h1 {
     margin: 0;

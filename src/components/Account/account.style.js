@@ -1,17 +1,17 @@
 import styled from 'styled-components'
 
 export const Card = styled.div`
-  height: 7rem;
-  width: 250px;
+  height: 12rem;
+  width: 12rem;
   border-radius: 0.4rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #8cb369;
-  box-shadow: 1px 2px 23px -14px rgba(0,0,0,0.66);
--webkit-box-shadow: 1px 2px 23px -14px rgba(0,0,0,0.66);
--moz-box-shadow: 1px 2px 23px -14px rgba(0,0,0,0.66);
+  background-color: ${(props) => (props.s < 0 ? '#F44336' : '#AED581')};
+  -webkit-box-shadow: -7px 7px 13px -7px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -7px 7px 13px -7px rgba(0, 0, 0, 0.75);
+  box-shadow: -7px 7px 13px -7px rgba(0, 0, 0, 0.75);
 `
 export const Button = styled(Card)`
   height: 5rem;

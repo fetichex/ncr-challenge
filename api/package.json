@@ -11,7 +11,8 @@
     "test": "vitest",
     "coverage": "vitest run --coverage",
     "start": "fastify start -l info app.js",
-    "dev": "fastify start -w -l info -P app.js"
+    "dev": "fastify start -w -l info -P app.js",
+    "format": "prettier -w ."
   },
   "keywords": [],
   "author": "",
@@ -26,6 +27,7 @@
   },
   "devDependencies": {
     "@istanbuljs/esm-loader-hook": "0.2.0",
+    "prettier": "^2.7.1",
     "tap": "^16.1.0"
   },
   "tap": {

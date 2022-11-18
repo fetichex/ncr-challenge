@@ -1,15 +1,17 @@
-import { useLocation } from 'wouter'
+import { useRoute } from 'wouter'
 
 import { ContainerInfo } from './accountInfo.style'
 import useAccountStore from '../../store'
-import { filterAccType } from '../../utils/utils'
+import { useEffect } from 'react'
 
 export default function AccountInfo() {
-  const accounts = useAccountStore((state) => state.accounts)
-
-  const [location] = useLocation()
-  const pL = parseInt(location.split('/')[1])
-  const { tipo_letras, saldo, n } = accounts?.find((_, i) => i === pL)
+  const setDetail = useAccountStore((state) => state.setDetail)
+  const { saldo, accType, n } = useAccountStore((state) => state.accDetail)
+  const [, params] = useRoute('/:id')
+  const { id } = params
+  useEffect(() => {
+    setDetail(id)
+  }, [id])
 
   return (
     <ContainerInfo>
@@ -20,7 +22,7 @@ export default function AccountInfo() {
       <div className='info'>
         <ul>
           <li>{`Saldo de la cuenta: ${saldo}`}</li>
-          <li>{`Tipo de cuenta: ${filterAccType(tipo_letras)}`}</li>
+          <li>{`Tipo de cuenta: ${accType}`}</li>
           <li>{`Número de cuenta: ${n}`}</li>
         </ul>
       </div>

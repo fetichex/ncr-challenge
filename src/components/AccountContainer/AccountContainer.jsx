@@ -25,15 +25,8 @@ export default function AccountContainer() {
         {currentPage !== 1 ? (
           <Card onClick={() => prevPage()}>Opciones Anteriores</Card>
         ) : null}
-        {currentPosts?.map((acc, i) => {
-          return (
-            <Account
-              key={i}
-              i={i}
-              t={acc.tipo_letras.toUpperCase()}
-              n={acc.n}
-            />
-          )
+        {currentPosts?.map(({ accType, n, saldo, id }) => {
+          return <Account key={id} id={id} t={accType} n={n} s={saldo} />
         })}
         {currentPage >= howManyPages ? null : (
           <Card onClick={() => nextPage()}>Mas opciones</Card>

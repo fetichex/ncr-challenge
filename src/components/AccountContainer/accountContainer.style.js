@@ -8,14 +8,14 @@ export const Container = styled.section`
   align-items: center;
   justify-content: space-evenly;
 
-  .texts{
+  .texts {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
   }
 
-  h1{
+  h1 {
     font-size: 3rem;
     margin-top: 1rem;
     margin-bottom: 0;

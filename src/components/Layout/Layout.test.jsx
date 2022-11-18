@@ -1,12 +1,12 @@
-import { render, screen } from '../../utils/test-utils'
+import { customRender, screen } from '../../utils/test-utils'
 import Layout from './Layout'
 
 describe('Layout', () => {
-  it('should render the application', () => {
-    render(<Layout />)
+  it('should customRender the application', () => {
+    customRender(<Layout />)
   })
   it('the title should be visible', () => {
-    render(<Layout />)
+    customRender(<Layout />)
     expect(screen.getByText(/NCR - challenge/i)).toBeInTheDocument()
   })
 })
